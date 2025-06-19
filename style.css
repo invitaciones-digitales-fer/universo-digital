@@ -117,11 +117,11 @@
             top: -30px; left: 50%; transform: translateX(-50%);
         }
         .baby { 
-            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            background: linear-gradient(45deg, #ff00d4, #fed6e3);
             top: 50%; right: -30px; transform: translateY(-50%);
         }
         .birthday { 
-            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            background: linear-gradient(45deg, #837a6d, #fcb69f);
             bottom: -30px; left: 50%; transform: translateX(-50%);
         }
         .xv { 
