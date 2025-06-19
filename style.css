@@ -1,0 +1,258 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .universe {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background: radial-gradient(ellipse at center, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 2s infinite alternate;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .central-hub {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4, #ffeaa7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 50px rgba(255, 107, 107, 0.5);
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .orbit {
+            position: absolute;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .orbit-1 { width: 400px; height: 400px; animation: rotate 20s linear infinite; }
+        .orbit-2 { width: 550px; height: 550px; animation: rotate 30s linear infinite reverse; }
+        .orbit-3 { width: 700px; height: 700px; animation: rotate 40s linear infinite; }
+        .orbit-4 { width: 850px; height: 850px; animation: rotate 50s linear infinite reverse; }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .satellite {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            animation: counter-rotate 20s linear infinite reverse;
+        }
+
+        .orbit-1 .satellite { animation-duration: 20s; }
+        .orbit-2 .satellite { animation-duration: 30s; }
+        .orbit-3 .satellite { animation-duration: 40s; }
+        .orbit-4 .satellite { animation-duration: 50s; }
+
+        @keyframes counter-rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        .wedding { 
+            background: linear-gradient(45deg, #ff9a9e, #fecfef);
+            top: -30px; left: 50%; transform: translateX(-50%);
+        }
+        .baby { 
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            top: 50%; right: -30px; transform: translateY(-50%);
+        }
+        .birthday { 
+            background: linear-gradient(45deg, #ffecd2, #fcb69f);
+            bottom: -30px; left: 50%; transform: translateX(-50%);
+        }
+        .xv { 
+            background: linear-gradient(45deg, #ffd89b, #19547b);
+            top: 50%; left: -30px; transform: translateY(-50%);
+        }
+
+        .graduation { 
+            background: linear-gradient(45deg, #89f7fe, #66a6ff);
+            top: -30px; right: 25%; transform: translateX(50%);
+        }
+        .communion { 
+            background: linear-gradient(45deg, #a8edea, #fed6e3);
+            top: 25%; right: -30px; transform: translateY(-50%);
+        }
+        .digital-gifts { 
+            background: linear-gradient(45deg, #ffeaa7, #fab1a0);
+            bottom: 25%; right: -30px; transform: translateY(50%);
+        }
+        .international { 
+            background: linear-gradient(45deg, #74b9ff, #0984e3);
+            bottom: -30px; right: 25%; transform: translateX(50%);
+        }
+        .halloween { 
+            background: linear-gradient(45deg, #fd79a8, #e84393);
+            bottom: -30px; left: 25%; transform: translateX(-50%);
+        }
+        .christmas { 
+            background: linear-gradient(45deg, #00b894, #00cec9);
+            bottom: 25%; left: -30px; transform: translateY(50%);
+        }
+        .corporate { 
+            background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+            top: 25%; left: -30px; transform: translateY(-50%);
+        }
+        .cultural { 
+            background: linear-gradient(45deg, #fd79a8, #fdcb6e);
+            top: -30px; left: 25%; transform: translateX(-50%);
+        }
+
+        .ai-nodes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ai-node {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: white;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .ai-1 { top: 10%; left: 10%; animation-delay: 0s; }
+        .ai-2 { top: 15%; right: 15%; animation-delay: 1s; }
+        .ai-3 { bottom: 20%; left: 20%; animation-delay: 2s; }
+        .ai-4 { bottom: 10%; right: 10%; animation-delay: 3s; }
+
+        .connection {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00d2ff, transparent);
+            animation: pulse-line 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-line {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .title {
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+            50% { text-shadow: 2px 2px 20px rgba(255,255,255,0.8); }
+        }
+
+        .subtitle {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #a8edea;
+            font-size: 18px;
+            text-align: center;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00d2ff;
+            border-radius: 50%;
+            animation: particle-float 6s linear infinite;
+        }
+
+        @keyframes particle-float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
